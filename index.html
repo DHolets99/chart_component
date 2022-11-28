@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
   <title>Frontend Mentor | Expenses chart component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,26 +16,62 @@
   </style>
 </head>
 <body>
+  <article class="component">
+    <section class="component__block balance">
+      <div class="balance__text">
+        <span class="balance__caption">My balance</span>
+        <h2 class="balance__amount">$921.48</h2>
+      </div>
+      <div class="balance__logo logo">
+        <img src="/images/logo.svg" alt="logo" class="logo__img">
+      </div>
+    </section>
 
-  My balance
-  $921.48
+    <section class="component__block main">
+      <h2 class="main__caption">Spending - Last 7 days</h2>
+      <div class="main__diagram columns">
+        <div class="column">
+          <div class="column__thumb"></div>
+          <span class="column__day">mon</span>
+        </div>
+        <div class="column">
+          <div class="column__thumb"></div>
+          <span class="column__day">tue</span>
+        </div>
+        <div class="column">
+          <div class="column__thumb"></div>
+          <span class="column__day">wed</span>
+        </div>
+        <div class="column">
+          <div class="column__thumb"></div>
+          <span class="column__day">thu</span>
+        </div>
+        <div class="column">
+          <div class="column__thumb"></div>
+          <span class="column__day">fri</span>
+        </div>
+        <div class="column">
+          <div class="column__thumb"></div>
+          <span class="column__day">sat</span>
+        </div>
+        <div class="column">
+          <div class="column__thumb"></div>
+          <span class="column__day">sun</span>
+        </div>
+      </div>
+      <div class="main__total">
+        <div class="total__text">
+          <span class="total__caption">Total this month</span>
+          <h1 class="total__amount">$478.33</h1>
+        </div>
+        <div class="precent__text">
+          <span class="precent__amount">+2.4%</span>
+          <span class="precent__caption">from last month</span>
+        </div>
+      </div>
+    </section>
+  </article>
 
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
