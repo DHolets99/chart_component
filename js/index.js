@@ -24,7 +24,11 @@ const getColumnHeight = () => {
             if (day == days[i].id) {
                 let hg = 2 * `${amount}`;
                 columns[i].style.height = hg + 'px';
-                column[i].style.height = (hg + 75) + 'px';
+                if (window.screen.width < 450) {
+                    column[i].style.height = (hg + 60) + 'px';
+                } else {
+                    column[i].style.height = (hg + 75) + 'px';
+                }
             };
             addTodayClass(days[i].id);
         };

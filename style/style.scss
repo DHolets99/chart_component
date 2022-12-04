@@ -70,6 +70,7 @@ body {
     border-top: 1px solid $Cream;
     width: 100%;
 }
+
 .main__diagram {
     margin-bottom: 32px;
 }
@@ -104,6 +105,10 @@ body {
 
 .column__thumb:hover {
     opacity: 0.6;
+}
+
+.column__day {
+    color: $Medium_brown;
 }
 
 .column__amount {
@@ -158,5 +163,59 @@ body {
         width: 100%;
         max-width: 343px;
         max-height: 534px;
+    }
+
+    .component__block {
+        border-radius: 10px;
+    }
+
+    .balance {
+        padding: 22px 20px;
+        height: 97px;
+        margin-bottom: 16px;
+    }
+
+    .balance__amount {
+        font-size: 24px;
+        margin-top: 4px;
+    }
+
+    .main {
+        padding: 24px 20px;
+        max-height: 420px;
+    }
+
+    .main__caption {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .main__total {
+        padding-top: 24px;
+    }
+
+    .main__diagram {
+        margin-bottom: 24px;
+    }
+
+    .column {
+        width: 33px;
+    }
+
+    .column__thumb {
+        width: 33px;
+        border-radius: 3px;
+        cursor: none;
+    }
+
+    .column__amount {
+        font-size: 13px;
+        padding: 6px 4px;
+        border-radius: 3px;
+        margin-bottom: 8px;
+    }
+
+    .total__amount {
+        font-size: 30px;
     }
 }
