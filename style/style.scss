@@ -1,0 +1,150 @@
+$Soft_red: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+$Dark_brown: hsl(25, 47%, 15%);
+$Medium_brown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Very_pale_orange: hsl(33, 100%, 98%);
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+
+body {
+    background-color: $Cream;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+}
+
+.component {
+    width: 100%;
+    max-width: 540px;
+    max-height: 660px;
+}
+
+.component__block {
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance {
+    background-color: $Soft_red;
+    padding: 25px 35px;
+    color: $Very_pale_orange;
+    height: 125px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+}
+
+.balance__amount {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.main {
+    background-color: $Very_pale_orange;
+    padding: 32px 40px 40px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-height: 510px;
+    box-sizing: border-box;
+}
+
+.main__caption {
+    font-size: 32px;
+    font-weight: 700;
+    color: $Dark_brown;
+    margin-bottom: 32px;
+}
+
+.main__total {
+    padding-top: 32px;
+    border-top: 1px solid $Cream;
+    width: 100%;
+}
+.main__diagram {
+    margin-bottom: 32px;
+}
+
+.columns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px;
+    //height: 180px;
+}
+
+.column__thumb {
+    width: 50px;
+    background-color: $Soft_red;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.column__thumb_active {
+    background-color: $Cyan;
+}
+
+.column__thumb:hover {
+    opacity: 0.6;
+}
+
+.column__amount {
+    background-color: $Dark_brown;
+    color: $Very_pale_orange;
+    font-weight: 700;
+    padding: 12px 7px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.main__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total__caption {
+    color: $Medium_brown;
+}
+
+.total__amount {
+    font-size: 48px;
+    font-weight: 700;
+    color: $Dark_brown;
+    margin-top: 5px;
+}
+
+.precent__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.precent__amount {
+    font-weight: 700;
+    color: $Dark_brown;
+}
+
+.precent__caption {
+    color: $Medium_brown;
+}
