@@ -10,7 +10,7 @@ const getWeekDay = () => {
 };
 
 (async () => {
-    let obj = await (await fetch('data.json')).json();
+    let obj = await (await fetch('../data.json')).json();
     obj.forEach(el => {
         arr.push(el);
     }); 
