@@ -1,5 +1,6 @@
 const days = document.querySelectorAll('.column__day');
 const columns = document.querySelectorAll('.column__thumb');
+const column = document.querySelectorAll('.column');
 const arr = [];
 
 let date = new Date();
@@ -21,7 +22,9 @@ const getColumnHeight = () => {
         let [day, amount] = [Object.values(el)[0], Object.values(el)[1]];
         for (i = 0; i < days.length; i++) {
             if (day == days[i].id) {
-                columns[i].style.height = 2 * `${amount}` + 'px';
+                let hg = 2 * `${amount}`;
+                columns[i].style.height = hg + 'px';
+                column[i].style.height = (hg + 75) + 'px';
             };
             addTodayClass(days[i].id);
         };
@@ -48,6 +51,7 @@ const hideTable = (e) => {
     const table = item.parentNode.querySelector('.column__amount');
     table.remove();
 }
+
 columns.forEach(el => {
     el.addEventListener('mouseover', showTable)
 });
