@@ -138,3 +138,14 @@ body {
 .precent__caption {
   color: hsl(28deg, 10%, 53%);
 }
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 15px;
+  }
+  .component {
+    width: 100%;
+    max-width: 343px;
+    max-height: 534px;
+  }
+}
