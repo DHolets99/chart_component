@@ -96,6 +96,10 @@ body {
   opacity: 0.6;
 }
 
+.column__day {
+  color: hsl(28deg, 10%, 53%);
+}
+
 .column__amount {
   background-color: hsl(25deg, 47%, 15%);
   color: hsl(33deg, 100%, 98%);
@@ -137,4 +141,58 @@ body {
 
 .precent__caption {
   color: hsl(28deg, 10%, 53%);
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 15px;
+  }
+  .component {
+    width: 100%;
+    max-width: 343px;
+    max-height: 534px;
+  }
+  .component__block {
+    border-radius: 10px;
+  }
+  .balance {
+    padding: 22px 20px;
+    height: 97px;
+    margin-bottom: 16px;
+  }
+  .balance__amount {
+    font-size: 24px;
+    margin-top: 4px;
+  }
+  .main {
+    padding: 24px 20px;
+    max-height: 420px;
+  }
+  .main__caption {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .main__total {
+    padding-top: 24px;
+  }
+  .main__diagram {
+    margin-bottom: 24px;
+  }
+  .column {
+    width: 33px;
+  }
+  .column__thumb {
+    width: 33px;
+    border-radius: 3px;
+    cursor: none;
+  }
+  .column__amount {
+    font-size: 13px;
+    padding: 6px 4px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .total__amount {
+    font-size: 30px;
+  }
 }
