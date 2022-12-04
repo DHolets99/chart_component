@@ -23,16 +23,35 @@ const getColumnHeight = () => {
             if (day == days[i].id) {
                 columns[i].style.height = 2 * `${amount}` + 'px';
             };
-            addToday(days[i].id);
+            addTodayClass(days[i].id);
         };
     });
 };
 
-const addToday = (day) => {
+const addTodayClass = (day) => {
     if (getWeekDay(date) == day) {
         columns[i].classList.toggle('column__thumb_active');
     }
 };
 
+const showTable = (e) => {
+    let item = e.target;
+    const table = document.createElement('div');
+    table.className = 'column__amount';
+    let curAmount = parseFloat(item.style.height)/2;
+    table.innerHTML = `$${curAmount}`;
+    item.parentNode.prepend(table);
+}
 
+const hideTable = (e) => {
+    let item = e.target;
+    const table = item.parentNode.querySelector('.column__amount');
+    table.remove();
+}
+columns.forEach(el => {
+    el.addEventListener('mouseover', showTable)
+});
 
+columns.forEach(el => {
+    el.addEventListener('mouseout', hideTable)
+});
